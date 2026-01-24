@@ -1,10 +1,12 @@
-import logo from "./logo.svg";
+import React from "react";
+import Weather from "./Weather";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <h1>Welcome to My React App</h1>
+      <Weather />
       <footer>
         Coded by <a href="https://github.com/Katmitsu">Katy Ciutac, </a>{" "}
         open-sourced on{" "}
