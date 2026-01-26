@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <h1>Welcome to My React App</h1>
-      <Weather />
+      <Weather defaultCity="New York" />
       <footer>
         Coded by <a href="https://github.com/Katmitsu">Katy Ciutac</a> and is
         open-sourced on{" "}
