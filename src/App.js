@@ -8,11 +8,11 @@ function App() {
       <h1>Welcome to My React App</h1>
       <Weather />
       <footer>
-        Coded by <a href="https://github.com/Katmitsu">Katy Ciutac, </a>{" "}
+        Coded by <a href="https://github.com/Katmitsu">Katy Ciutac</a> and is
         open-sourced on{" "}
         <a href="https://github.com/Katmitsu/weather-react-app">Github </a>
         and hosted on{" "}
-        <a href="https://bespoke-marshmallow-032f5b.netlify.app/"> Netlify.</a>
+        <a href="https://sparkly-frangollo-a06dec.netlify.app/"> Netlify.</a>
       </footer>
     </div>
   );

@@ -8,11 +8,15 @@ export default function Weather() {
         <div className="row">
           <div className="col-9">
             <input type="text" placeholder="Enter a city..." />
-          </div>
-          <div className="col-3">
-            <button type="submit" value="Current" className="btn btn-secondary">
-              Current
-            </button>
+            <div className="col-3">
+              <button
+                type="submit"
+                value="Current"
+                className="btn btn-secondary"
+              >
+                Current
+              </button>
+            </div>{" "}
           </div>
         </div>
       </form>
@@ -31,6 +35,7 @@ export default function Weather() {
         </div>
         <div className="col-6">
           <ul>
+            <li>Precipitation: 10%</li>
             <li>Humidity: 80%</li>
             <li>Wind: 10 km/h</li>
           </ul>
