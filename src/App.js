@@ -10,7 +10,7 @@ function App() {
       <footer>
         Coded by <a href="https://github.com/Katmitsu">Katy Ciutac</a> and is
         open-sourced on{" "}
-        <a href="https://github.com/Katmitsu/weather-react-app">Github </a>
+        <a href="https://github.com/Katmitsu/forecast-react-app">Github </a>
         and hosted on{" "}
         <a href="https://sparkly-frangollo-a06dec.netlify.app/"> Netlify.</a>
       </footer>
