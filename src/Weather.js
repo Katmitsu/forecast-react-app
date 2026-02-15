@@ -3,10 +3,20 @@ import "./Weather.css";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
+import CurrentButton from "./Current";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+
+  function handleCurrentLocation(coordinates) {
+    const apiKey = "224f23t3b08b6cab3df63781o3c48aaf";
+    let longitude = coordinates.longitude;
+    let latitude = coordinates.latitude;
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=metric`;
+
+    axios.get(apiUrl).then(handleResponse);
+  }
 
   function handleResponse(response) {
     setWeatherData({
@@ -57,6 +67,7 @@ export default function Weather(props) {
                 value="Search"
                 className="btn btn-primary w-100"
               />
+              <CurrentButton onCurrentLocation={handleCurrentLocation} />
             </div>
           </div>
         </form>
