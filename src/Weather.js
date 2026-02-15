@@ -24,10 +24,6 @@ export default function Weather(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
-  function search() {
-    searchCity(city);
-  }
-
   function handleResponse(response) {
     setWeatherData({
       ready: true,
