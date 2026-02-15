@@ -18,6 +18,16 @@ export default function Weather(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
+  function searchCity(cityName) {
+    const apiKey = "224f23t3b08b6cab3df63781o3c48aaf";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityName}&key=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function search() {
+    searchCity(city);
+  }
+
   function handleResponse(response) {
     setWeatherData({
       ready: true,
@@ -47,12 +57,43 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
+  function searchLisbon(event) {
+    event.preventDefault();
+    searchCity("Lisbon");
+  }
+  function searchParis(event) {
+    event.preventDefault();
+    searchCity("Paris");
+  }
+  function searchTokyo(event) {
+    event.preventDefault();
+    searchCity("Tokyo");
+  }
+  function searchChisinau(event) {
+    event.preventDefault();
+    searchCity("Chisinau");
+  }
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
+        <div className="search-links mb-3 d-flex justify-content-left grid gap-3">
+          <a href="/" onClick={searchLisbon}>
+            Lisbon
+          </a>
+          <a href="/" onClick={searchParis}>
+            Paris
+          </a>
+          <a href="/" onClick={searchTokyo}>
+            Tokyo
+          </a>
+          <a href="/" onClick={searchChisinau}>
+            Chisinau
+          </a>
+        </div>
         <form onSubmit={handleSubmit}>
           <div className="row">
-            <div className="col-9">
+            <div className="col-6">
               <input
                 type="search"
                 placeholder="Enter a city.."
@@ -61,12 +102,8 @@ export default function Weather(props) {
                 onChange={handleCityChange}
               />
             </div>
-            <div className="col-3">
-              <input
-                type="submit"
-                value="Search"
-                className="btn btn-primary w-100"
-              />
+            <div className="col-3 d-flex justify-content-left grid gap-3 ">
+              <input type="submit" value="Search" className="btn btn-primary" />{" "}
               <CurrentButton onCurrentLocation={handleCurrentLocation} />
             </div>
           </div>

@@ -5,7 +5,8 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to My React App</h1>
+      <h1 className="main">Welcome to My React App</h1>
+
       <Weather defaultCity="New York" />
       <footer>
         Coded by{" "}

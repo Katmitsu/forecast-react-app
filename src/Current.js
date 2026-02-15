@@ -14,7 +14,7 @@ export default function CurrentButton(props) {
   return (
     <button
       type="button"
-      className="btn btn-secondary w-100 mt-2"
+      className="btn btn-success w-100"
       onClick={handleClick}
     >
       Current
