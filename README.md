@@ -28,6 +28,5 @@ The app allows users to search for a city and displays real-time weather data in
 - React components and props
 - Managing state with hooks
 - Conditional rendering
-- API integration with asynchronous requests
 - Structuring a multi-component React application
 - Debugging and deployment
