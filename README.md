@@ -5,7 +5,7 @@ A fully functional weather application built with React.
 The app allows users to search for a city and displays real-time weather data including temperature, weather conditions, forecast, and unit conversion.
 
 ## 🚀 Live Demo
-👉 [View the live project here]([https://sparkly-frangollo-a06dec.netlify.app/])
+👉 [View the live project here](https://sparkly-frangollo-a06dec.netlify.app/)
 
 ## 🛠️ Technologies Used
 - React.js
